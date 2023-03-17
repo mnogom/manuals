@@ -36,6 +36,7 @@ EMAIL_HOST_PASSWORD=userpassword
 
 4. В `settings.py`:
 ```python
+[...]
 from dotenv import load_dotenv
 import os
 
