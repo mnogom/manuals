@@ -27,9 +27,10 @@ EMAIL_HOST_USER=user@email.com
 EMAIL_HOST_PASSWORD=userpassword
 ```
 
-3. Добавим файл в `.gitignore`, чтобы не запушить его в репозиторий. Если .gitignore нет - создадим его в корне проекта.
+3. Добавим файл в `.gitignore`, чтобы не запушить его в репозиторий. Если `.gitignore` нет - создадим его в корне проекта.
 [Подробнее...](https://www.atlassian.com/ru/git/tutorials/saving-changes/gitignore)
 ```
+[...]
 /.env
 ```
 
@@ -41,7 +42,7 @@ import os
 # Load .env file
 load_dotenv()
 
-...
+[...]
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Reading from env
@@ -52,7 +53,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', '0') == '1'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
-...
+[...]
 
 # Email configs
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -63,7 +64,7 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
-...
+[...]
 
 ```
 5. Теперь можно пушить в репозиторий (в примере - через консоль)
